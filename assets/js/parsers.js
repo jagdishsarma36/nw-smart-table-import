@@ -83,7 +83,39 @@ function stiParsePipe(input) {
 
             return row
                 .split('|')
+
+                // remove empty edge columns
+                .filter((cell, index, arr) => {
+
+                    // remove first empty
+                    if (
+                        index === 0 &&
+                        cell.trim() === ''
+                    ) {
+                        return false;
+                    }
+
+                    // remove last empty
+                    if (
+                        index === arr.length - 1 &&
+                        cell.trim() === ''
+                    ) {
+                        return false;
+                    }
+
+                    return true;
+                })
+
                 .map(cell => cell.trim());
+
+        })
+
+        // remove markdown separator row
+        .filter(row => {
+
+            return !row.every(cell =>
+                /^:?-+:?$/.test(cell)
+            );
 
         });
 
