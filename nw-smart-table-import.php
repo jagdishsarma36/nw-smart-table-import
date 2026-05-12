@@ -3,7 +3,7 @@
  * Plugin Name: NW Table Importer
  * Plugin URI: https://jagdish.info
  * Description: Import Excel, CSV, TSV, and HTML tables into Classic Editor.
- * Version: 1.0.1
+ * Version: 1.0.0
  * Author: Jagdish Sarma
  * License: GPL2
  */
@@ -35,6 +35,8 @@ $sti_github_updater->init([
     'plugin_file' => __FILE__,
     'repository' => 'jagdishsarma36/nw-smart-table-import',
     'source' => 'auto',
+    'private' => false,
+    'token'  => '', //apply when private true
 ]);
 
 function sti_enqueue_admin_assets($hook) {

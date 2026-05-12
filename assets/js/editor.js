@@ -127,6 +127,36 @@
                 }
             );
 
+            editor.on('init', function () {
+
+                setTimeout(function () {
+
+                    const tableButton = editor.editorContainer.querySelector(
+                        '.mce-btn[aria-label*="Table"]'
+                    );
+
+                    if (tableButton) {
+
+                        // prevent duplicate text
+                        if (!tableButton.querySelector('.sti-edit-table-label')) {
+
+                            const label = document.createElement('span');
+
+                            label.className = 'sti-edit-table-label';
+
+                            //label.style.marginLeft = '5px';
+                            label.style.lineHeight = '24px';
+
+                            label.innerHTML = 'Edit Table';
+
+                            tableButton.appendChild(label);
+                        }
+                    }
+
+                }, 300);
+
+            });
+
         }
     );
 
