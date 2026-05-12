@@ -3,7 +3,7 @@
  * Plugin Name: NW Table Importer
  * Plugin URI: https://jagdish.info
  * Description: Import Excel, CSV, TSV, and HTML tables into Classic Editor.
- * Version: 1.0.0
+ * Version: 1.0.2
  * Author: Jagdish Sarma
  * License: GPL2
  */
