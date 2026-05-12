@@ -4,7 +4,7 @@ Contributors: Jagdish Sarma
 Tags: table, excel, csv, classic editor
 Requires at least: 5.0
 Tested up to: 6.8
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 
 Import Excel, CSV, TSV, and HTML tables directly into the Classic Editor.
